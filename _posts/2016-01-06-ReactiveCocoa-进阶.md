@@ -57,26 +57,6 @@ Hook原理：在每次调用一个API返回结果之前，先执行你自己的�
 	**RACStreamBindBlock**:
 `typedef RACStream * (^RACStreamBindBlock)(id value, BOOL *stop);`
 
-     `参数一(value)`:表示接收到信号的原始值，还没做处理
-     
-     `参数二(*stop)`:用来控制绑定Block，如果*stop = yes,那么就会结束绑定。
-     
-     `返回值`：信号，做好处理，在通过这个信号返回出去，一般使用 `RACReturnSignal`,需要手动导入头文件`RACReturnSignal.h`
-
-- **使用**
-
-	假设想监听文本框的内容，并且在每次输出结果的时候，都在文本框的内容拼接一段文字“输出：”
-
-	- 使用封装好的方法：在返回结果后，拼接。
-
-		```
-		[_textField.rac_textSignal subscribeNext:^(id x) {
-		
-			// 在返回结果后，拼接 输出：
-			NSLog(@"输出:%@",x);
-		
-		}];
-		```
 
 
 	- 方式二:，使用RAC中 `bind` 方法做处理，在返回结果前，拼接。
