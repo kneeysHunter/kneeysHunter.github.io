@@ -3,7 +3,7 @@ title: BY Blog #博客标题
 SEOTitle: 李晓亮的博客 | BY Blog #显示在浏览器上搜索的时候显示的标题
 header-img: img/post-bg-desk.jpg #显示在首页的背景图片
 email: 392612703@qq.com 
-description: "Every failure is leading towards success." #网页介绍
+description: "记录每一步" #网页介绍
 keyword: "BY, BY Blog, 李晓亮的博客 , 李晓亮" #关键字
 url: "http://lixiaoliang-no1.github.io"          # your host, for absolute URL 你的博客地址
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
