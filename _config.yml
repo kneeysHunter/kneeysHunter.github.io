@@ -4,10 +4,10 @@ SEOTitle: 李晓亮的博客 | BY Blog #显示在浏览器上搜索的时候显�
 header-img: img/post-bg-desk.jpg #显示在首页的背景图片
 email: 392612703@qq.com 
 description: "Every failure is leading towards success." #网页介绍
-keyword: "BY, BY Blog, 李晓亮的博客 , qiubaiying, 李晓亮, iOS, Apple, iPhone" #关键字
+keyword: "BY, BY Blog, 李晓亮的博客 , 李晓亮" #关键字
 url: "http://lxl.github.io"          # your host, for absolute URL 你的博客地址
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
-github_repo: "https://github.com/kneeysHunter/lxl.github.io.git" # you code repository
+github_repo: "https://github.com/lixiaoliang-no1/lxl.github.io.git" # you code repository
 
 # Sidebar settings 侧边栏
 sidebar: true                           # whether or not using Sidebar. 是否开启侧边栏
@@ -78,7 +78,7 @@ ba_track_id: b50bf2b12b5338a1845e33832976fd68
 
 # Google Analytics
 ga_track_id: 'UA-90855596-1'            # Format: UA-xxxxxx-xx
-ga_domain: qiubaiying.top               # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
+ga_domain: auto              # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
 
 
 
