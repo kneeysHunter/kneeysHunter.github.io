@@ -43,3 +43,30 @@ tags:
   >select id as i,name as n from teacher where i=1 错误
   >select id as i,name as n from teacher having i=1 正确
   >```
+
+- 无法在where子句中使用聚合函数,因为group by 执行顺序在where之后之后，而聚合函数是建立在group by上的
+
+  >```sql
+  >select department_id,avg(salary)
+  >from employees
+  >where  avg(salary)>6000
+  >group by departmen_id
+  >```
+
+  >sql语句的执行顺序为
+  >
+  > from子句
+  >
+  >where 子句
+  >
+  >group by 子句
+  >
+  >having 子句
+  >
+  >order by 子句
+  >
+  >select 子句
+  >
+  >首先得知道聚合函数是对结果集运算的，当在where子句使用聚合函数时，此时根据group by 分割结果集的子句还没有执行，此时只有from 后的结果集。
+  >
+  >所以无法在where子句中使用聚合函数。
