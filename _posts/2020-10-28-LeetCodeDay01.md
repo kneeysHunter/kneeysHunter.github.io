@@ -2,7 +2,7 @@
 layout:     post
 title:      leetcode 分糖果 只出现一次的数字
 subtitle:   try，哈
-date:       2020-10-14
+date:       2020-10-28
 author:     BY lxl
 header-img: img/title/数据库权限.jpg
 catalog: true
