@@ -36,15 +36,20 @@ tags:
       "react": { "opacityDefault": 0.8, "opacityOnHover": 0.1 } });
 </script>
 
-#  Git 使用基本流程
 
-- 创建身份。
+
+
+#  Git 提交的使用基本流程
+
+Git 是一个开源的分布式版本控制系统
+
+![image-20210106122313919](C:\Users\39261\AppData\Roaming\Typora\typora-user-images\image-20210106122313919.png)
+
+- 配置身份。
 - git init创建仓库
 - git add 将要想要提交的代码添加进来
 - git commit 将添加进来的代码提交到（带备注）
-- git push origin 分支名称 将提交的代码进行同步
-
-
+- git push c 分支名称 将提交的代码进行同步
 
 ###  windows 请自行下载安装，https://git-scm.com/download/win安装成功右键会有git bash 提示
 
@@ -292,3 +297,50 @@ git push origin master --allow-unrelated-histories
 
 ##  无法push到仓库，多数需要先进行同步，先pull，在push
 
+#  Git 分支
+
+### 分支
+
+分支（branch）有什么用呢？假设你准备开发一个新功能，但是需要两周才能完成，第一周你写了50%的代码，如果立刻提交，由于代码还没写完，不完整的代码库会导致别人不能干活了。如果等代码全部写完再一次提交，又存在丢失每天进度的巨大风险。创建了一个属于你自己的分支，别人看不到，还继续在原来的分支上正常工作，而你在自己的分支上干活，想提交就提交，直到开发完毕后，再一次性合并到原来的分支上，这样，既安全，又不影响别人工作。
+
+### 分支内部原理
+
+1、如下图所示，版本的每一次提交（commit），git都将它们根据提交的时间点串联成一条线。刚开始是只有一条时间线，即master分支，HEAD指向的是当前分支的当前版本。
+
+ ![img](https://img-blog.csdn.net/20160122230457471)
+
+2、当创建了新分支，比如dev分支（通过命令git branch dev完成），git新建一个指针dev，dev=master，dev指向master指向的版本，然后切换到dev分支（通过命令git checkout dev完成），把HEAD指针指向dev，如下图。
+
+![img](https://img-blog.csdn.net/20160122231232795)
+
+3、在dev分支上编码开发时，都是在dev上进行指针移动，比如在dev分支上commit一次，dev指针往前移动一步，但是master指针没有变，如下：
+
+![img](https://img-blog.csdn.net/20160122231356422)
+
+4、当我们完成了dev分支上的工作，要进行分支合并，把dev分支的内容合并到master分支上（通过首先切换到master分支，git branch master，然后合并git merge dev命令完成）。其内部的原理，其实就是先把HEAD指针指向master，再把master指针指向现在的dev指针指向的内容。如下图。
+
+![img](https://img-blog.csdn.net/20160122231702926)
+
+5、当合并分支的时候出现冲突（confict），比如在dev分支上commit了一个文件file1，同时在master分支上也提交了该文件file1，修改的地方不同（比如都修改了同一个语句），那么合并的时候就有可能出现冲突，如下图所示。
+
+![img](https://img-blog.csdn.net/20160122233146679)
+
+这时候执行git merge dev命令，git会默认执行合并，但是要手动解决下冲突，然后在master上git add并且git commit，现在git分支的结构如下图。
+
+![img](https://img-blog.csdn.net/20160122233448030)
+
+可以使用如下命令查看分支合并情况。
+
+
+
+1. git log --graph --pretty=oneline --abbrev-commit 
+
+
+
+6、合并完成后，就可以删除掉dev分支（通过git branch -d dev命令完成）。
+
+![img](https://img-blog.csdn.net/20160122231752833)
+
+
+
+如此，就是分支开发的原理。其好处也是显而易见的。
