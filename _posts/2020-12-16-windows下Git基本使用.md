@@ -217,7 +217,7 @@ git init
   ```git
   git add .
   git commit -m"xxx"
-  git pull origin master(自己的分支名)
+  git push origin master(自己的分支名)
   ```
 
   #  可能出现的问题
