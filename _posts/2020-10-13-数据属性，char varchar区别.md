@@ -2,7 +2,7 @@
 layout:     post
 title:      数据属性，char varchar 等
 subtitle:   水滴石穿
-date:       2020-10-13
+date:       2020-11-30
 author:     BY lxl
 header-img: img/title/数据库权限.jpg
 catalog: true

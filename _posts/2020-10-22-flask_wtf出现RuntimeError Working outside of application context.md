@@ -1,11 +1,8 @@
 ---
-
-
-
 layout:     post
 title:      RuntimeError Working outside of application context.
 subtitle:   垃圾问题毁我青春
-date:       2020-10-22
+date:       2020-11-31
 author:     BY lxl
 header-img: img/title/数据库权限.jpg
 catalog: true

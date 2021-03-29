@@ -1,8 +1,7 @@
 ---
 layout:     post
 title:      union inner/left/right join
-subtitle:   try，哈
-date:       2020-10-14
+date:       2020-11-30
 author:     BY lxl
 header-img: img/title/数据库权限.jpg
 catalog: true
