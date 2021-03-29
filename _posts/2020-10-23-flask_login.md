@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      flask_login
-subtitle:   垃圾问题毁我青春
+title:      Flask_login
+subtitle:   登入装饰器
 date:       2020-11-31
 author:     BY lxl
 header-img: img/title/数据库权限.jpg
